@@ -1,18 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 body {
-    background-color: #9A4D9F;
+    background-color: rgba(154, 77, 159, 1)
 }
-header {
+/* skeleton layout using grid*/
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr  1.5fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "fish fish container2"
+    "about time location"
+    "map map map";
+}
+.container2 {
+    display: grid;
+    grid-template-rows: .3fr .7fr;
+    grid-area: container2;
+}
+nav {
+    background-color: rgba(0, 190, 145, 0.4);
+    grid-area: nav;
+}
+#fish {
+    background-color: rgba(0, 190, 191, 0.4);
+    grid-area: fish;
+}
+#date {
+    background-color: rgba(0, 151, 191, 0.4);
+}
+#tickets {
+    background-color: rgba(85, 151, 191, 0.4);
+}
+#about {
+    background-color: rgba(85, 151, 146, 0.4);
+    grid-area: about;
+}
+#time {
+    background-color: rgba(85, 151, 94, 0.4);
+    grid-area: time;
+}
+#location {
+    background-color: rgba(85, 100, 200, 0.4);
+    grid-area: location;
+}
+#map {
+    background-color: rgba(140, 151, 123, 0.4);
+    grid-area: map;
+}
+@media only screen and (max-width: 786px) { /* tablets */
+    .container {
+        height: 180vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr 1.1fr;
+        grid-template-areas: 
+        "nav"
+        "fish"
+        "container2"
+        "about"
+        "time"
+        "location"
+        "map";
+    }
+    .container2 {
+        grid-template-columns: .3fr .7fr;
+        grid-template-rows: 1fr;
+
+    }
+}
+@media only screen and (max-width: 481px) { /* phones */
+    .container {
+        height: 180vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr 1.1fr;
+        grid-template-areas: 
+        "nav"
+        "fish"
+        "container2"
+        "about"
+        "time"
+        "location"
+        "map";
+    }
+    .container2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr .7fr;
+    }
+}
+/* nav bar */
+#nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;
-    background-color: black;
+
 }
 
 .nav_items {
