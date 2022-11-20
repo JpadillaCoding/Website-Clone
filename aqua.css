@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+
 body {
     background-color: rgba(154, 77, 159, 1);
     background-image: url("img/Mask\ Group\ 3.png");
@@ -7,11 +8,11 @@ body {
     background-size: 95vh;
     margin: 0px;
     padding: 0px;
+    font-family: montserrat;
 }
 /* skeleton layout using grid*/
 .container{
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .2fr  1.5fr 1fr 1fr;
     grid-template-areas: 
@@ -26,34 +27,38 @@ body {
     grid-area: container2;
 }
 nav {
-    background-color: rgba(0, 190, 145, 0.4);
+    
     grid-area: nav;
 }
 #fish {
-    background-color: rgba(0, 190, 191, 0.4);
+    
     grid-area: fish;
 }
-#container2-content {
-    background-color: rgba(0, 151, 191, 0.4);
-}
 #tickets {
-    background-color: rgba(85, 151, 191, 0.4);
 }
 #about {
-    background-color: rgba(85, 151, 146, 0.4);
     grid-area: about;
+    text-align: center;
+    padding: 10px;
 }
 #time {
-    background-color: rgba(85, 151, 94, 0.4);
     grid-area: time;
+    text-align: center;
+    padding: 10px;
 }
 #location {
-    background-color: rgba(85, 100, 200, 0.4);
     grid-area: location;
+    text-align: center;
+    padding: 10px;
 }
 #map {
-    background-color: rgba(140, 151, 123, 0.4);
     grid-area: map;
+    background-image: url("img/google.png");
+    background-size: 150%;
+    display: flex;
+    align-items: center;
+    background-position: top 20px right 0px;
+    background-repeat: no-repeat;
 }
 @media only screen and (max-width: 786px) { /* tablets */
     .container {
@@ -111,11 +116,11 @@ nav {
     color: white;
     font-family: montserrat;
     font-style: bold;
-    font-size: 12;
+    font-size: .75rem;
 }
 button {
     font-family: montserrat;
-    font-size: 12;
+    font-size: .75rem;
     font-style: bold;
     color: white;
     background-color: rgba(0,0,0,0);
@@ -132,7 +137,7 @@ button {
     text-align: center;
     border-radius: .5rem;
     font-family: montserrat;
-    font-size: 2.2rem;
+    font-size: 2.44rem;
     color: white;
 
 }
@@ -142,4 +147,29 @@ button {
 #calender a {
     font-size: 1rem;
     font-weight: lighter;
+}
+#container2-content {
+    text-align: center;
+}
+#cont2-content-1 {
+    font-size: 2rem;
+}
+#cont2-content-2 {
+    font-size: 1.5rem;
+    color: white;
+}
+#pin {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#container2-content button{
+    font-weight: bold;
+    font-size: 1.05rem;
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    width: 230px;
+    height: 40px;
 }
