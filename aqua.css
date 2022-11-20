@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 body {
-    background-color: rgba(154, 77, 159, 1)
+    background-color: rgba(154, 77, 159, 1);
+    background-image: url("img/Mask\ Group\ 3.png");
+    background-repeat: no-repeat;
+    background-position: top -2rem left -10rem;
+    background-size: 95vh;
+    margin: 0px;
+    padding: 0px;
 }
 /* skeleton layout using grid*/
 .container{
@@ -16,7 +22,7 @@ body {
 }
 .container2 {
     display: grid;
-    grid-template-rows: .3fr .7fr;
+    grid-template-rows: .3fr 1fr;
     grid-area: container2;
 }
 nav {
@@ -27,7 +33,7 @@ nav {
     background-color: rgba(0, 190, 191, 0.4);
     grid-area: fish;
 }
-#date {
+#container2-content {
     background-color: rgba(0, 151, 191, 0.4);
 }
 #tickets {
@@ -64,7 +70,7 @@ nav {
         "map";
     }
     .container2 {
-        grid-template-columns: .3fr .7fr;
+        grid-template-columns: .3fr 1fr;
         grid-template-rows: 1fr;
 
     }
@@ -85,7 +91,7 @@ nav {
     }
     .container2 {
         grid-template-columns: 1fr;
-        grid-template-rows: .3fr .7fr;
+        grid-template-rows: .3fr 1fr;
     }
 }
 /* nav bar */
@@ -116,4 +122,24 @@ button {
     border: 2px solid white;
     padding: 10px 30px;
     border-radius: 2px;
+}
+/* calender */
+#calender {
+    background-color: rgba(209, 209, 209, 0.2);
+    margin: -20px 100px;
+    max-width: 80px;
+    min-width: 80px;
+    text-align: center;
+    border-radius: .5rem;
+    font-family: montserrat;
+    font-size: 2.2rem;
+    color: white;
+
+}
+#calender p {
+    padding: .1px;
+}
+#calender a {
+    font-size: 1rem;
+    font-weight: lighter;
 }
