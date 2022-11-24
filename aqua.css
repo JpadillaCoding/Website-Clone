@@ -27,6 +27,9 @@ body {
     grid-area: container2;
     margin-top: 50px;
 }
+.hamburger-container{
+    position: absolute;
+}
 nav {
     grid-area: nav;
 }
@@ -192,6 +195,9 @@ button {
     #nov {
         font-size: 1.5rem;
     }
+    .info {
+        margin: auto 200px;
+    }
     #map {
         background-size: 190%;
         padding: 300px 300px 100px 300px;
@@ -240,6 +246,9 @@ button {
     }
     body {
         background-size: 800px;
+    }
+    .hamburger-container{
+        position: static;
     }
     .nav-options{
         margin-right: 30%;
