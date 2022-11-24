@@ -26,22 +26,18 @@ body {
     grid-template-rows: .3fr 1fr;
     grid-area: container2;
     margin-top: 50px;
-    border: 1px solid red;
 }
 nav {
     grid-area: nav;
-    border: 1px solid red;
 }
 #fish {
     grid-area: fish;
-    border: 2px solid green;
 }
 
 #tickets {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
 
 }
 .info {
@@ -56,19 +52,16 @@ nav {
     grid-area: about;
     text-align: center;
     padding: 10px;
-    border: 1px solid red;
 }
 #time {
     grid-area: time;
     text-align: center;
     padding: 10px;
-    border: 1px solid red;
 }
 #location {
     grid-area: location;
     text-align: center;
     padding: 10px;
-    border: 1px solid red;
 }
 #location img {
     width: 55px;
@@ -80,14 +73,15 @@ nav {
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: top 0% left 50%;
-    border: 1px solid blue;
 }
 /* nav bar */
 #nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+}
+input {
+    display: none;
 }
 
 .nav_items {
@@ -113,7 +107,6 @@ button {
 }
 .container2{
     margin-left: 300px;
-    border: 1px solid pink;
 }
 /* calender */
 #calender {
@@ -128,7 +121,6 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid orange;
 }
 #calender p {
     margin: 0px;
@@ -202,7 +194,7 @@ button {
     }
     #map {
         background-size: 190%;
-        padding: 300px;
+        padding: 300px 300px 100px 300px;
     }
     
 }
@@ -235,9 +227,58 @@ button {
 
 @media only screen and (max-width: 600px) { /*phones */
     .container {
-        grid-template-rows: .2fr 100px 1fr 1fr 1fr 1fr .3fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 320px 1fr 1fr 1fr 1fr .3fr;
+        grid-template-areas: 
+        "nav"
+        "fish"
+        "container2"
+        "about"
+        "time"
+        "location"
+        "map";
     }
-    .container2 {
-        margin: auto 100px;
+    body {
+        background-size: 800px;
+    }
+    .nav-options{
+        margin-right: 30%;
+    }
+    .nav_items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        padding: 0px;
+        width: 150px;
+        height: 230px;
+        background-color: rgba(8, 9, 27, .8);
+        transform: translateY(-150%);
+        top: 30px;
+        left: 0px;
+        transition: 0s;
+    }
+    .hamburger {
+        display: block;
+        margin-top: 5px;
+    }
+    .bar {
+        display: block;
+        width: 33px;
+        height: 4px;
+        background-color: white;
+        border-radius: 6px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    input:checked ~ .nav_items{
+        transform: translateY(0);
+        transition: .4s;
+    }
+    #map {
+        background-size: 240%;
+    }
+    #cont2-content-1 {
+        font-size: 2.5rem;
     }
 }
