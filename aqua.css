@@ -47,24 +47,20 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: -30px;
+    padding: 10px;
+    text-align: center;
 }
 .info p {
     font-weight: lighter;
 }
 #about {
     grid-area: about;
-    text-align: center;
-    padding: 10px;
 }
 #time {
     grid-area: time;
-    text-align: center;
-    padding: 10px;
 }
 #location {
     grid-area: location;
-    text-align: center;
-    padding: 10px;
 }
 #location img {
     width: 55px;
@@ -251,7 +247,7 @@ button {
         position: static;
     }
     .nav-options{
-        margin-right: 30%;
+        margin-right: 35%;
     }
     .nav_items {
         display: flex;
