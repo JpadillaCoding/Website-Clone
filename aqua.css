@@ -27,9 +27,6 @@ body {
     grid-area: container2;
     margin-top: 50px;
 }
-.hamburger-container{
-    position: absolute;
-}
 nav {
     grid-area: nav;
 }
@@ -74,6 +71,9 @@ nav {
     background-position: top 0% left 50%;
 }
 /* nav bar */
+.hamburger-container{
+    position: absolute;
+}
 #nav-container {
     display: flex;
     justify-content: space-between;
