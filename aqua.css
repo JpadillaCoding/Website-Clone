@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@100;400;700&display=swap');
+
+body {
+    background-color: rgba(154, 77, 159, 1);
+    background-image: url("img/Mask\ Group\ 3.png");
+    background-repeat: no-repeat;
+    background-position: top 0 left -300px;
+    background-size: 1000px;
+    margin: 0px;
+    padding: 0px;
+    font-family: montserrat;
+}
+/* skeleton layout using grid*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr  2fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "fish container2 container2"
+    "about time location"
+    "map map map";
+}
+.container2 {
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-area: container2;
+    margin-top: 50px;
+}
+nav {
+    grid-area: nav;
+}
+#fish {
+    grid-area: fish;
+}
+
+#tickets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.info {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: -30px;
+    padding: 10px;
+    text-align: center;
+}
+.info p {
+    font-weight: lighter;
+}
+#about {
+    grid-area: about;
+}
+#time {
+    grid-area: time;
+}
+#location {
+    grid-area: location;
+}
+#location img {
+    width: 55px;
+}
+
+#map {
+    grid-area: map;
+    background-image: url("img/google.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: top 0% left 50%;
+}
+/* nav bar */
+.hamburger{
+    position: absolute;
+}
+#nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input {
+    display: none;
+}
+
+.nav_items {
+    list-style: none;
+}
+.nav_items li {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0px 5px;
+    color: white;
+    font-size: .75rem;
+    font-weight: bold;
+
+}
+button {
+    font-size: .75rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid white;
+    padding: 10px 17px;
+    border-radius: 5px;
+}
+.container2{
+    margin-left: 300px;
+}
+/* calender */
+#calender {
+    background-color: rgba(209, 209, 209, 0.3);
+    text-align: center;
+    border-radius: .5rem;
+    font-size: 2.44rem;
+    color: white;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#calender p {
+    margin: 0px;
+    padding: 0px;
+}
+#nov {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+#container2-content {
+    text-align: center;
+}
+#cont2-content-1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+#cont2-content-2 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: lighter;
+}
+#pin {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#pin img {
+    margin-right: 5px;
+}
+#container2-content button{
+    font-weight: bold;
+    font-size: 1.05rem;
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    width: 230px;
+    height: 40px;
+    margin-top: 30px;
+}
+@media only screen and (max-width: 1153px) { /* tablets */
+    .container {
+        height: 180vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 500px .3fr .3fr .3fr .3fr 1.1fr;
+        grid-template-areas: 
+        "nav"
+        "fish"
+        "container2"
+        "about"
+        "time"
+        "location"
+        "map";
+    }
+    .container2 {
+        grid-template-columns: .3fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 50px 0;
+        padding: 0px;
+
+    }
+    #calender {
+        font-size: 4rem;
+        width: 110px;
+        height: 110px;
+    }
+    #nov {
+        font-size: 1.5rem;
+    }
+    .info {
+        margin: auto 200px;
+    }
+    #map {
+        background-size: 190%;
+        padding: 300px 300px 100px 300px;
+    }
+    
+}
+@media only screen and (max-width: 740px) { /* small screen */
+    .container {
+        height: 180vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 250px 1fr 1fr 1fr 1fr .3fr;
+        grid-template-areas: 
+        "nav"
+        "fish"
+        "container2"
+        "about"
+        "time"
+        "location"
+        "map";
+    }
+    body {
+        background-size: 600px;
+        background-position: left -150px top 0px;
+    }
+    .container2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr 1fr;
+    }
+    .info {
+        margin: auto 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) { /*phones */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 320px 1fr 1fr 1fr 1fr .3fr;
+        grid-template-areas: 
+        "nav"
+        "fish"
+        "container2"
+        "about"
+        "time"
+        "location"
+        "map";
+    }
+    body {
+        background-size: 800px;
+    }
+    .hamburger{
+        position: static;
+    }
+    .nav-options{
+        margin-right: 35%;
+    }
+    .nav_items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        padding: 0px;
+        width: 150px;
+        height: 230px;
+        background-color: rgba(8, 9, 27, .8);
+        transform: translateY(-150%);
+        top: 30px;
+        left: 0px;
+        transition: 0s;
+    }
+    .hamburger {
+        display: block;
+        margin-top: 5px;
+    }
+    .bar {
+        display: block;
+        width: 33px;
+        height: 4px;
+        background-color: white;
+        border-radius: 6px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    input:checked ~ .nav_items{
+        transform: translateY(0);
+        transition: .4s;
+    }
+    #map {
+        background-size: 240%;
+    }
+    #cont2-content-1 {
+        font-size: 2.5rem;
+    }
+}
