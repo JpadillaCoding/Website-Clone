@@ -1,6 +1,6 @@
 # Website Clone
 ## What I did
-I made a clone of the blacklight-aquarium XD file. This was supposed to mimick a scenerio of a designer giving me design plans and having me make a static mock-up of the design.
+I made a clone of the blacklight-aquarium XD file. This was supposed to mimick a scenerio of a designer giving me design plans and having me make a static mock-up of the design. Open the .xd file and compare it to my mock-up!
 ## Previewing
 The website can be previewed on github [pages](https://jpadillacoding.github.io./) 
 ## Built With
